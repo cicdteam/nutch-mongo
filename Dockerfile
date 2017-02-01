@@ -25,4 +25,7 @@ ADD config/regex-urlfilter.txt /nutch/runtime/local/conf/regex-urlfilter.txt
 
 # Start nutch webserver for controlling with REST API
 EXPOSE 8081
-CMD [ "/nutch/runtime/local/bin/nutch", "nutchserver" ]
+EXPOSE 8080
+ADD init.sh /nutch/init.sh
+RUN chmod +x /nutch/init.sh
+CMD [ "/nutch/init.sh" ]
