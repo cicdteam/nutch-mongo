@@ -1,0 +1,22 @@
+language: none
+
+branches:
+  only:
+    - master
+
+build:
+  ci:
+    - docker build -t pure/nutch-mongo:alpine -f Dockerfile.alpine .
+    - docker build -t pure/nutch-mongo:debian -f Dockerfile.debian .
+
+  post_ci:
+    - docker push pure/nutch-mongo:alpine
+    - docker push pure/nutch-mongo:debian
+
+    - docker tag  pure/nutch-mongo:alpine pure/nutch-mongo:latest
+    - docker push pure/nutch-mongo:latest
+
+integrations:
+  hub:
+    - integrationName: DockerHub
+      type: docker

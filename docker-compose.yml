@@ -1,0 +1,6 @@
+version: '2'
+services:
+  nutch:
+    image: pure/nutch-mongo:alpine
+  mongo:
+    image: mongo:3.2

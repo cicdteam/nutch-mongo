@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+  <property>
+    <name>parser.character.encoding.default</name>
+    <value>utf-8</value>
+  </property>
+
+  <property>
+    <name>storage.data.store.class</name>
+    <value>org.apache.gora.mongodb.store.MongoStore</value>
+    <description>Default class for storing data</description>
+  </property>
+
+  <property>
+    <name>http.agent.name</name>
+    <value>My Crawler</value>
+  </property>
+
+  <property>
+    <name>http.timeout</name>
+    <value>120000</value>
+    <description>The default network timeout, in milliseconds.</description>
+  </property>
+
+  <property>
+    <name>http.useHttp11</name>
+    <value>true</value>
+    <description>NOTE: at the moment this works only for protocol-httpclient.
+    If true, use HTTP 1.1, if false use HTTP 1.0 .
+    </description>
+  </property>
+
+  <property>
+    <name>http.content.limit</name>
+    <value>6553600</value>
+  </property>
+
+  <property>
+    <name>db.ignore.external.links</name>
+    <value>true</value> <!-- do not leave the seeded domains (optional) -->
+  </property>
+
+  <property>
+    <name>plugin.includes</name>
+    <value>protocol-(http|httpclient)|urlfilter-regex|index-(basic|more)|query-(basic|site|url|lang)|indexer-elastic|nutch-extensionpoints|parse-(text|html|msexcel|msword|mspowerpoint|pdf)|summary-basic|scoring-opic|urlnormalizer-(pass|regex|basic)|parse-(html|tika|metatags)|index-(basic|anchor|more|metadata)</value>
+  </property>
+
+  <property>
+    <name>generate.update.crawldb</name>
+    <value>true</value>
+    <description>For highly-concurrent environments, where several
+    generate/fetch/update cycles may overlap, setting this to true ensures
+    that generate will create different fetchlists even without intervening
+    updatedb-s, at the cost of running an additional job to update CrawlDB.
+    If false, running generate twice without intervening
+    updatedb will generate identical fetchlists.</description>
+  </property>
+
+  <property>
+    <name>fetcher.threads.fetch</name>
+    <value>10</value>
+    <description>The number of FetcherThreads the fetcher should use.
+    This is also determines the maximum number of requests that are
+    made at once (each FetcherThread handles one connection). The total
+    number of threads running in distributed mode will be the number of
+    fetcher threads * number of nodes as fetcher has one map task per node.
+    </description>
+  </property>
+
+  <property>
+    <name>fetcher.threads.per.queue</name>
+    <value>10</value>
+    <description>This number is the maximum number of threads that
+      should be allowed to access a queue at one time. Setting it to 
+      a value > 1 will cause the Crawl-Delay value from robots.txt to
+      be ignored and the value of fetcher.server.min.delay to be used
+      as a delay between successive requests to the same server instead 
+      of fetcher.server.delay.
+     </description>
+  </property>
+
+  <property>
+    <name>fetcher.server.delay</name>
+    <value>1.0</value>
+    <description>The number of seconds the fetcher will delay between 
+     successive requests to the same server.</description>
+  </property>
+
+  <property>
+    <name>fetcher.threads.per.host</name>
+    <value>10</value>
+    <description>This number is the maximum number of threads that
+      should be allowed to access a host at one time.</description>
+  </property>
+
+</configuration>
