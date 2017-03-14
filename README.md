@@ -4,8 +4,7 @@ Based on official Apache Nutch release (current Nutch version is 2.3.1).
 
 ## Supported tags and respective `Dockerfile` links
 
-- alpine, latest [(Dockerfile.alpine)](Dockerfile.alpine)
-- debian [(Dockerfile.debian)](Dockerfile.debian)
+- alpine, latest [(Dockerfile)](Dockerfile)
 
 ## Used technologies
 
