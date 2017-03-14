@@ -35,7 +35,7 @@ ADD conf/ /nutch/conf/
 ```
 
 - Create your own configuration files and seed list
-  - **[urls/seed.txt](urls/seed.txt)** - file containing URLs to crawl
+  - **[urls/seeds.txt](urls/seed.txt)** - file containing URLs to crawl
   - **[conf/gora.properties](conf/gora.properties)** - set MongoDB credentials and database name
   - **[conf/nutch-site.xml](conf/nutch-site.xml)** - tune your own crawler parametrs
   - **[conf/regex-urlfilter.txt](conf/regex-urlfilter.txt)** - set Regular Expressions for your URLS to crawl
