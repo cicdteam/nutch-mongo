@@ -6,8 +6,8 @@ branches:
 
 build:
   ci:
-    - docker build -t pure/nutch-mongo:alpine -f Dockerfile.alpine .
-    - docker build -t pure/nutch-mongo:debian -f Dockerfile.debian .
+    - docker build -t pure/nutch-mongo:alpine -f dockerfiles/alpine/Dockerfile .
+    - docker build -t pure/nutch-mongo:debian -f dockerfiles/debian/Dockerfile .
 
   post_ci:
     - docker push pure/nutch-mongo:alpine
