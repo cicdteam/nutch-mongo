@@ -80,7 +80,7 @@
     <dependency org="org.restlet.jse" name="org.restlet.ext.jackson" rev="2.2.3" conf="*->default" />
     <dependency org="org.restlet.jse" name="org.restlet.ext.jaxrs" rev="2.2.3" conf="*->default" />
 
-    <!--artifacts needed for testing
+    <!--artifacts needed for testing -->
     <dependency org="junit" name="junit" rev="4.11" conf="*->default" />
 
     <dependency org="org.mortbay.jetty" name="jetty" rev="6.1.26" conf="test->default" />
@@ -91,7 +91,6 @@
     <dependency org="org.jdom" name="jdom" rev="1.1" conf="test->default"/>
     <dependency org="org.mockito" name="mockito-all" rev="1.9.5" conf="test->default"/>
     <dependency org="org.springframework" name="spring-test" rev="4.0.4.RELEASE" conf="test->default"/>
-  -->
 
     <!--================-->
     <!-- Gora artifacts -->
