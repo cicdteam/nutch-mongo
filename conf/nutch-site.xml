@@ -46,11 +46,6 @@
   </property>
 
   <property>
-    <name>plugin.includes</name>
-    <value>protocol-(http|httpclient)|urlfilter-regex|index-(basic|more)|query-(basic|site|url|lang)|indexer-elastic|nutch-extensionpoints|parse-(text|html|msexcel|msword|mspowerpoint|pdf)|summary-basic|scoring-opic|urlnormalizer-(pass|regex|basic)|parse-(html|tika|metatags)|index-(basic|anchor|more|metadata)</value>
-  </property>
-
-  <property>
     <name>generate.update.crawldb</name>
     <value>true</value>
     <description>For highly-concurrent environments, where several
